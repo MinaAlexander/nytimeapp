@@ -78,8 +78,10 @@ public class DetailesFragment extends Fragment {
         return view;
     }
 
-    public void update_Info(String sources, String title, String body) {
-        text_Source.setText(sources);
+    public void update_Info(String source, String title, String body) {
+        Log.e(TAG, "data heating postion update_Info : " + source+" - "+title+" - "+body);
+
+        text_Source.setText(source);
         txt_Title.setText(title);
         txt_Body.setText(body);
     }

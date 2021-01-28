@@ -118,11 +118,13 @@ public class MainActivity extends AppCompatActivity implements  AllArticalsFragm
             dual = false;
             Intent intent=new Intent(this,DetailesActivity.class);
             intent.putExtra("source",String.valueOf(source));
-            intent.putExtra("source",String.valueOf(title));
-            intent.putExtra("source",String.valueOf(body));
+            intent.putExtra("title",String.valueOf(title));
+            intent.putExtra("body",String.valueOf(body));
             startActivity(intent);
         } else {
             dual = true;
+            Log.e(TAG, "data heating postion ELSE : " + source+" - "+title+" - "+body);
+
             currentFragment2.update_Info(source,title,body);
 
         }

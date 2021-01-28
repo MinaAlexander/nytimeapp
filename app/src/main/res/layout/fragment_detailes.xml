@@ -18,10 +18,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5sp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+
                 android:text="source"
 
                 />
@@ -30,21 +28,16 @@
                 android:id="@+id/title_artical"
                 android:layout_width="match_parent"
                 android:layout_height="19dp"
-                android:layout_margin="5sp"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_margin="15sp"
+
                 android:text="title"/>
 
             <TextView
                 android:id="@+id/body_artical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5sp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_margin="15sp"
+
                 android:text="body"/>
         </LinearLayout>
 

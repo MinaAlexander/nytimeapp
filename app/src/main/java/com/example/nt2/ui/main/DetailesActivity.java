@@ -22,7 +22,7 @@ public class DetailesActivity extends AppCompatActivity {
 //            update_Info(value_Source, value_Title, value_Body);
 //
         DetailesFragment currentFragment = (DetailesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_detailes);
-        currentFragment.update_Info("ac", "1", "2");
+        currentFragment.update_Info(value_Source, value_Title, value_Body);
 
 
     }
