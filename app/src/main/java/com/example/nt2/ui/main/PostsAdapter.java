@@ -20,9 +20,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
     private OnItemListener mOnClick;
     private static String TAG = "PostsAdapter";
 
-    public PostsAdapter(List<Results> postList, OnItemListener mOnClick) {
-        this.postList = postList;
-        this.mOnClick = mOnClick;
+    public PostsAdapter( OnItemListener mOnClick) {
+         this.mOnClick = mOnClick;
     }
 
     @NonNull
@@ -46,7 +45,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
 
     public void setList(List<Results> postList) {
         this.postList = postList;
-        Log.e(TAG, "postList : " + postList);
+        Log.e(TAG, "postListgetItemCount : " + postList.size());
         notifyDataSetChanged();
     }
 

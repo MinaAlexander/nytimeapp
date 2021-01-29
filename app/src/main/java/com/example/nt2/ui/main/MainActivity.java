@@ -1,6 +1,7 @@
 package com.example.nt2.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -23,12 +24,17 @@ public class MainActivity extends AppCompatActivity implements  AllArticalsFragm
     private PostsAdapter adapter;
     Boolean mIsDualPane = false;
     public static Boolean dual;
+    AllArticalsFragment allArticalsFragment;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        allArticalsFragment=new AllArticalsFragment();
+        final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_container, allArticalsFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
 //        Postes = new ArrayList<>();
 //        postViewModel = ViewModelProviders.of(this).get(PostViewModel.class);
 //        postViewModel.getPosts();

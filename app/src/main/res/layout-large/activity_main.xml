@@ -19,15 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
-<fragment
+<FrameLayout
     android:name="com.example.nt2.ui.fragment.AllArticalsFragment"
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_all_articals"
     android:layout_weight="2"
 
-    ></fragment>
+    ></FrameLayout>
 
     <fragment
         android:name="com.example.nt2.ui.fragment.DetailesFragment"
