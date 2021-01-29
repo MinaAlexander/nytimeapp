@@ -1,0 +1,7 @@
+this is the New York times app.
+New York times app sync with New York Times API and get the most popular 20 articles from the server.
+this app is written with java code and android studio.
+using Model View ViewMove architecture.
+can run the app on any android device or emulator. 
+using espresso to test UI and mockito to test data. 
+can generate coverage reports in the normal way in android studio. 
