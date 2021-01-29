@@ -17,13 +17,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import com.example.nt2.R;
 import com.example.nt2.pojo.Data;
 import com.example.nt2.pojo.Results;
-import com.example.nt2.ui.Interface.MyCommunicator;
-import com.example.nt2.ui.main.MainActivity;
 import com.example.nt2.ui.main.PostViewModel;
 import com.example.nt2.ui.main.PostsAdapter;
 
@@ -32,12 +29,11 @@ import java.util.ArrayList;
 public class AllArticalsFragment extends Fragment implements PostsAdapter.OnItemListener {
 
     private PostViewModel postViewModel;
-    private static String TAG = "FAllArticals";
+    private static String TAG = "AllArticalsFragment";
     private ArrayList<Results> Postes;
     private RecyclerView recyclerView;
     private PostsAdapter adapter;
     private View rootView;
-    private Bundle bundle;
 
     onHeatLisener onHeatLisener;
 
@@ -56,10 +52,7 @@ public class AllArticalsFragment extends Fragment implements PostsAdapter.OnItem
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-//        DetailesFragment currentFragment2 = (DetailesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_detailes_large);
-//        AllArticalsFragment currentFragment = (AllArticalsFragment) getSupportFragmentManager().findFragmentById(R.id.main_container);
-
-        Postes = new ArrayList<>();
+     Postes = new ArrayList<>();
         postViewModel = ViewModelProviders.of(this).get(PostViewModel.class);
         postViewModel.getPosts();
         recyclerView = rootView.findViewById(R.id.recycler);
@@ -90,15 +83,12 @@ public class AllArticalsFragment extends Fragment implements PostsAdapter.OnItem
     public void onItemClick(int postion) {
         Log.e(TAG, "postion :" + postion);
         onHeatLisener.heating(String.valueOf(Postes.get(postion).getSource()),String.valueOf(Postes.get(postion).getTitle()),String.valueOf(Postes.get(postion).getArticalbody()));
-
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         onHeatLisener=(onHeatLisener) context;
-//        ((MainActivity) getActivity()).setContext(context);
-
     }
 
     public interface onHeatLisener {

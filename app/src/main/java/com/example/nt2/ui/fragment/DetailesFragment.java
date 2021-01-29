@@ -11,16 +11,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nt2.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetailesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class DetailesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
+       private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String TAG = "Fragment_Detailes";
     private TextView txt_Title, text_Source, txt_Body;
@@ -31,7 +25,6 @@ public class DetailesFragment extends Fragment {
     private String mParam2;
 
     public DetailesFragment() {
-        // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
@@ -63,18 +56,6 @@ public class DetailesFragment extends Fragment {
         txt_Title = view.findViewById(R.id.title_artical);
         txt_Body = view.findViewById(R.id.body_artical);
 
-//        if (getArguments() != null) {
-//            value_Source = getArguments().getString("source");
-//            value_Title = getArguments().getString("title");
-//            value_Body = getArguments().getString("body");
-//            update_Info(value_Source, value_Title, value_Body);
-//
-//        } else {
-//            Log.e(TAG, "value : " + "Null");
-//        }
-//        text_Source.setText(value_Source);
-//        txt_Title.setText(value_Title);
-//        txt_Body.setText(value_Body);
         return view;
     }
 

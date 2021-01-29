@@ -1,5 +1,6 @@
 package com.example.nt2.ui.main;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,7 +8,7 @@ import android.os.Bundle;
 
 import com.example.nt2.R;
 import com.example.nt2.ui.fragment.DetailesFragment;
-
+@VisibleForTesting
 public class DetailesActivity extends AppCompatActivity {
     private String value_Title, value_Source, value_Body;
 
@@ -19,8 +20,7 @@ public class DetailesActivity extends AppCompatActivity {
         value_Source = intent.getStringExtra("source");
         value_Title = intent.getStringExtra("title");
         value_Body = intent.getStringExtra("body");
-//            update_Info(value_Source, value_Title, value_Body);
-//
+
         DetailesFragment currentFragment = (DetailesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_detailes);
         currentFragment.update_Info(value_Source, value_Title, value_Body);
 
