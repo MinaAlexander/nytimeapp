@@ -7,25 +7,21 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.nt2.data.Repositry;
 import com.example.nt2.pojo.Data;
-import com.example.nt2.pojo.Results;
-
-import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PostViewModel extends ViewModel {
-
-
     public MutableLiveData<Data> postsMutableLiveData = new MutableLiveData<>();
     public MutableLiveData<String> posts = new MutableLiveData<>();
     private static String TAG = "PostViewModel";
-    ArrayList<Results> Postes = new ArrayList();
+//    private ArrayList<Results> Postes = new ArrayList();
 
     public void getPosts() {
-        postsMutableLiveData= fillData();
+        postsMutableLiveData = fillData();
     }
+
     public MutableLiveData<Data> fillData() {
         Repositry.getINSTANCE().getPosts().enqueue(new Callback<Data>() {
             @Override
@@ -47,11 +43,8 @@ public class PostViewModel extends ViewModel {
             public void onFailure(Call<Data> call, Throwable t) {
                 posts.setValue("errr");
                 Log.e(TAG, "PostesModels error : " + t);
-
             }
         });
         return postsMutableLiveData;
     }
-
-
 }

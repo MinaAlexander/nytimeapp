@@ -1,7 +1,5 @@
 package com.example.nt2.pojo;
 
-import android.util.Log;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -84,17 +82,4 @@ public class Results {
     public void setSource(String source) {
         this.source = source;
     }
-
-    @Override
-    public String toString() {
-        return "Results{" +
-                "uri='" + uri + '\'' +
-                ", url='" + url + '\'' +
-                ", id=" + id +
-                ", assetId=" + assetId +
-                ", source='" + source + '\'' +
-                '}';
-    }
-
-
 }

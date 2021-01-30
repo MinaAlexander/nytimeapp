@@ -1,9 +1,6 @@
 package com.example.nt2.ui.main;
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
-
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;
@@ -19,10 +16,11 @@ public class PostViewModelTest {
     @Before
     public void setUp() throws Exception {
     }
+
     @Test
-    public void getPosts(){
+    public void getPosts() {
         doReturn(postViewModel.fillData()).when(postViewModel).fillData();
         System.out.println(postViewModel.fillData());
     }
 
-   }
+}

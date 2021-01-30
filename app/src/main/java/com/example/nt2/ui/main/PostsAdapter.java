@@ -20,14 +20,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
     private OnItemListener mOnClick;
     private static String TAG = "PostsAdapter";
 
-    public PostsAdapter( OnItemListener mOnClick) {
-         this.mOnClick = mOnClick;
+    public PostsAdapter(OnItemListener mOnClick) {
+        this.mOnClick = mOnClick;
     }
 
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_post, parent, false);
         return new PostViewHolder(view, mOnClick);
     }
 
@@ -67,7 +67,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
                 }
             });
         }
-
 
         @Override
         public void onClick(View v) {

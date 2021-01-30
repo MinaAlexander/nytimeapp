@@ -5,14 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.example.nt2.R;
 import com.example.nt2.databinding.FragmentDetailesBinding;
-import com.example.nt2.pojo.Results;
 
 
 public class DetailesFragment extends Fragment {
@@ -20,10 +18,7 @@ public class DetailesFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String TAG = "Fragment_Detailes";
-    private TextView txt_Title, text_Source, txt_Body;
-    FragmentDetailesBinding binding;
-    private Bundle bundle;
-    private String value_Title, value_Source, value_Body;
+    private FragmentDetailesBinding binding;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -78,7 +73,7 @@ public class DetailesFragment extends Fragment {
     }
 
     public void onBackPressed() {
-        AllArticalsFragment nextFrag = new AllArticalsFragment();
+        PostsFragment nextFrag = new PostsFragment();
         getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.main_container, nextFrag)
                 .addToBackStack(null)

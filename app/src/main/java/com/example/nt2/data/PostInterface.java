@@ -2,8 +2,6 @@ package com.example.nt2.data;
 
 import com.example.nt2.pojo.Data;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 

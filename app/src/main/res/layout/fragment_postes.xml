@@ -9,8 +9,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragment.AllArticalsFragment"
-        android:background="#1EFF00AA"
+        tools:context=".ui.fragment.PostsFragment"
+        android:background="@color/color_postes"
         android:id="@+id/main_container">
 
         <!--    <TextView-->

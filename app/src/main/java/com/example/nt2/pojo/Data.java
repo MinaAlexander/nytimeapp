@@ -55,13 +55,4 @@ public class Data {
         this.results = results;
     }
 
-    @Override
-    public String toString() {
-        return "Data{" +
-                "status='" + status + '\'' +
-                ", copyright='" + copyright + '\'' +
-                ", num_results=" + num_results +
-                ", results=" + results +
-                '}';
-    }
 }
