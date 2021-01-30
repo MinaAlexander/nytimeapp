@@ -3,5 +3,6 @@ New York times app sync with New York Times API and get the most popular 20 arti
 this app is written with java code and android studio.
 using Model View ViewMove architecture.
 can run the app on any android device or emulator. 
+this app compatible with phone and tablet.
 using espresso to test UI and mockito to test data. 
 can generate coverage reports in the normal way in android studio. 
