@@ -7,4 +7,7 @@ this app compatible with phone and tablet.
 using espresso to test UI and mockito to test data. 
 can generate coverage reports in the normal way in android studio.
 
-https://user-images.githubusercontent.com/50551573/106364038-cdf88e80-6334-11eb-8d96-70d6c282d9d7.png
+
+![Screenshot_1612028604](https://user-images.githubusercontent.com/50551573/106364038-cdf88e80-6334-11eb-8d96-70d6c282d9d7.png)
+![Screenshot_1612028615](https://user-images.githubusercontent.com/50551573/106364039-d05ae880-6334-11eb-972f-01952b85e714.png)
+![Screenshot_1612028623](https://user-images.githubusercontent.com/50551573/106364043-d4870600-6334-11eb-94d8-4ee03b4f240a.png)
