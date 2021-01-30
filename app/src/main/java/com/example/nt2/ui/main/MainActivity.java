@@ -82,4 +82,10 @@ public class MainActivity extends AppCompatActivity implements  AllArticalsFragm
         }
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

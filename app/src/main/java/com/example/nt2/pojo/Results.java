@@ -85,14 +85,16 @@ public class Results {
         this.source = source;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Results{" +
-//                "uri='" + uri + '\'' +
-//                ", url='" + url + '\'' +
-//                ", id=" + id +
-//                ", assetId=" + assetId +
-//                ", source='" + source + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Results{" +
+                "uri='" + uri + '\'' +
+                ", url='" + url + '\'' +
+                ", id=" + id +
+                ", assetId=" + assetId +
+                ", source='" + source + '\'' +
+                '}';
+    }
+
+
 }

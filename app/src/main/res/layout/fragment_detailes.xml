@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragment.DetailesFragment"
-    android:background="#FFFFFF"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.DetailesFragment"
+        android:background="#FFFFFF">
 
 
         <LinearLayout
@@ -30,7 +35,7 @@
                 android:layout_height="19dp"
                 android:layout_margin="15sp"
 
-                android:text="title"/>
+                android:text="title" />
 
             <TextView
                 android:id="@+id/body_artical"
@@ -38,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
 
-                android:text="body"/>
+                android:text="body" />
         </LinearLayout>
 
-</FrameLayout>
+    </FrameLayout>
+</layout>
