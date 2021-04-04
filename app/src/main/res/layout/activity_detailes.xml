@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.DetailesActivity">
+    tools:context=".ui.main.DetailesActivity"
+    android:background="@color/purple_200"
+    >
 
     <fragment
-        android:name="com.example.nt2.ui.fragment.DetailesFragment"
         android:id="@+id/fragment_detailes"
+        android:name="com.example.MyMovieFilmApp.ui.fragment.moviedetailes.DetailesFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/fragment_detailes"
-        android:layout_weight="1"></fragment>
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_movie_detaile"
+        android:background="@color/purple_200"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
