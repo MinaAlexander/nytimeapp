@@ -32,8 +32,7 @@ public class WatchNowViewModel extends ViewModel {
         Log.e(TAG, "fillData: " + "key : " + key + " pageNumber : " + String.valueOf(pageNumber));
         Repositry.getINSTANCE().getWatchNowMovies(key, pageNumber).enqueue(new Callback<Data>() {
 
-            //        Repositry.getINSTANCE().getPosts(Credentials.API_KEY,1).enqueue(new Callback<Data>() {
-            @Override
+             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
 
                 if (response.isSuccessful() && response.body() != null) {
@@ -74,11 +73,9 @@ public class WatchNowViewModel extends ViewModel {
                     GenresMutableLiveData.setValue(response.body());
                     GenresList = response.body().getGenres();
                     genres.setGenres(GenresList);
-//                    genres.setAdditionalProperty(response.body().getGenres());
 
                     Log.e(TAG, "getGenres 9966774455: " + "Genres.size() : " + genres.getGenres());
-//                    Log.e(TAG, "getGenres: " + "response.body(): " + response.body().getClass());
-//                    Log.e(TAG, "getGenres: " + "response.body(): " + response.body().getClass());
+
                     if (GenresList.size() > 0) {
 
                         for (int i = 0; i < GenresList.size(); i++) {

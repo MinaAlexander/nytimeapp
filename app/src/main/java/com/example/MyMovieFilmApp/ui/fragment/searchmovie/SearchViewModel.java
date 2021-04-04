@@ -31,8 +31,7 @@ public class SearchViewModel extends ViewModel {
         Log.e(TAG, "fillData: " + "key : " + key + " pageNumber : " + String.valueOf(pageNumber));
         RepositrySearch.getINSTANCE().getSearchMovies(key,movename, pageNumber).enqueue(new Callback<Data>() {
 
-            //        Repositry.getINSTANCE().getPosts(Credentials.API_KEY,1).enqueue(new Callback<Data>() {
-            @Override
+             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
 
                 if (response.isSuccessful() && response.body() != null) {

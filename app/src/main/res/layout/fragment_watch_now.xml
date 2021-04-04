@@ -36,12 +36,3 @@
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--    <layout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--        xmlns:tools="http://schemas.android.com/tools">-->
-
-    <!--        <data>-->
-
-    <!--        </data>-->
-
-    <!--    </layout>-->

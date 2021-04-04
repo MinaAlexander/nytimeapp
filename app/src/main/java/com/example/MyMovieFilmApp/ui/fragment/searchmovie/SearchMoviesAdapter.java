@@ -42,8 +42,7 @@ public class SearchMoviesAdapter extends RecyclerView.Adapter<SearchMoviesAdapte
         holder.movie_ratingBar.setRating(postList.get(position).getVote_average() / 2);
         holder.movieTitle.setText(String.valueOf(postList.get(position).getTitle()));
         holder.moveVote.setText(String.valueOf(postList.get(position).getVote_average()));
-//        holder.moveVote.setText(String.valueOf(postList.get(position).getGenre_ids()));
-        Log.e(TAG, "getGenre_ids : " + postList.get(position).getGenre_ids());
+         Log.e(TAG, "getGenre_ids : " + postList.get(position).getGenre_ids());
     }
 
     @Override
@@ -73,8 +72,7 @@ public class SearchMoviesAdapter extends RecyclerView.Adapter<SearchMoviesAdapte
             moveVote = itemView.findViewById(R.id.move_vote);
             movieImage = itemView.findViewById(R.id.movieImage);
             movie_ratingBar = itemView.findViewById(R.id.movie_ratingBar);
-//            bodyTV = itemView.findViewById(R.id.move_date_relase);
-            this.onItemListener = onItemListener;
+             this.onItemListener = onItemListener;
             itemView.setOnClickListener(this);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

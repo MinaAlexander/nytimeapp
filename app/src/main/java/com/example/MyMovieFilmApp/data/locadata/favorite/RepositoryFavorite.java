@@ -42,23 +42,9 @@ public class RepositoryFavorite {
 
     public LiveData<MovieModel> getOneMovies(Integer favoriteMovies) {
         return favoriteDao.getOneMovie(favoriteMovies);
-//     (favoriteDao).execute(favoriteMovies);
-    }
-
-
+     }
 
     //////////////////////////////
-//    private static class searchMovieAsyncTask extends AsyncTask<Integer, Void, Void> {
-//        private FavoriteDao favoriteDao;
-//        private searchMovieAsyncTask(FavoriteDao favoriteDao) {
-//            this.favoriteDao = favoriteDao;
-//        }
-//        @Override
-//        protected Void doInBackground(Integer... favoriteMovies) {
-//            favoriteDao.getOneMovie(favoriteMovies[0]);
-//            return null;
-//        }
-//    }
 
     /////////
     private static class InsertMovieAsyncTask extends AsyncTask<MovieModel, Void, Void> {

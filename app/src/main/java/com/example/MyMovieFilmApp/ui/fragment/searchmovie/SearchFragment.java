@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -70,8 +69,7 @@ public class SearchFragment extends Fragment implements SearchMoviesAdapter.OnIt
             }
         });
         return rootView;
-//        return inflater.inflate(R.layout.fragment_search, container, false);
-    }
+     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -109,8 +107,7 @@ public class SearchFragment extends Fragment implements SearchMoviesAdapter.OnIt
                         page_number = page_number + 1;
                         searchViewModel.fillData(DataAuth.API_KEY, String.valueOf(moveName.getText()), page_number);
                     } else {
-//                        Toast.makeText(getContext(), "there is no more movies!!", Toast.LENGTH_SHORT).show();
-                    }
+                     }
 
                 }
             }
@@ -196,8 +193,7 @@ public class SearchFragment extends Fragment implements SearchMoviesAdapter.OnIt
                 @Override
                 public void onClick(DialogInterface dialoge, int i) {
                     checkInternet();
-//                    Retry.setVisibility(View.VISIBLE);
-//                    Exit.setVisibility(View.VISIBLE);
+
                 }
             }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {

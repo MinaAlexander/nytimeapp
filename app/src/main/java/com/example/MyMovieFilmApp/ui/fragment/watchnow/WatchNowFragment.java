@@ -59,10 +59,7 @@ public class WatchNowFragment extends Fragment implements WatchNowMovieAdapter.O
         recyclerView = rootView.findViewById(R.id.recycler);
         progressBar = rootView.findViewById(R.id.progressBar);
         return rootView;
-//        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_watch_now, container, false);
-//        View rootView = binding.getRoot();
-////        postes = new ArrayList<>();
-//        return rootView;
+
     }
 
     @SuppressLint("FragmentLiveDataObserve")
@@ -75,14 +72,10 @@ public class WatchNowFragment extends Fragment implements WatchNowMovieAdapter.O
         adapter = new WatchNowMovieAdapter(this);
         layoutManager = new LinearLayoutManager(getActivity());
 
-//        binding.recycler.setAdapter(adapter);
-//        binding.recycler.setLayoutManager(layoutManager);
-//        binding.progressBar.setVisibility(View.GONE);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
         progressBar.setVisibility(View.GONE);
-//        binding.recycler.
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
@@ -102,13 +95,11 @@ public class WatchNowFragment extends Fragment implements WatchNowMovieAdapter.O
                     Log.e(TAG, "!!!isLoading : " + "   data.getTotal_pages() : " + pagesNumber);
 
                     if (page_number <= pagesNumber) {
-//                        binding.progressBar
-                        progressBar.setVisibility(View.VISIBLE);
+                         progressBar.setVisibility(View.VISIBLE);
                         page_number = page_number + 1;
                         watchNowViewModel.fillData(DataAuth.API_KEY, page_number);
                     } else {
-//                        Toast.makeText(getContext(), "there is no more movies!!", Toast.LENGTH_SHORT).show();
-                    }
+                     }
 
                 }
             }
@@ -183,8 +174,6 @@ public class WatchNowFragment extends Fragment implements WatchNowMovieAdapter.O
                 @Override
                 public void onClick(DialogInterface dialoge, int i) {
                     checkInternet();
-//                    Retry.setVisibility(View.VISIBLE);
-//                    Exit.setVisibility(View.VISIBLE);
                 }
             }) .setNegativeButton("No", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {

@@ -37,13 +37,11 @@ public class FavoriteMovieAdapter extends RecyclerView.Adapter<FavoriteMovieAdap
 
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
-//        holder.moveName.setText(String.valueOf(postList.get(position).getId()));
-        Picasso.get().load("https://image.tmdb.org/t/p/w500/" + postList.get(position).getPoster_path()).into(holder.movieImage);
+         Picasso.get().load("https://image.tmdb.org/t/p/w500/" + postList.get(position).getPoster_path()).into(holder.movieImage);
         holder.movie_ratingBar.setRating(postList.get(position).getVote_average() / 2);
         holder.movieTitle.setText(String.valueOf(postList.get(position).getTitle()));
         holder.moveVote.setText(String.valueOf(postList.get(position).getVote_average()));
-//        holder.moveVote.setText(String.valueOf(postList.get(position).getGenre_ids()));
-        Log.e(TAG, "getGenre_ids : " + postList.get(position).getGenre_ids());
+         Log.e(TAG, "getGenre_ids : " + postList.get(position).getGenre_ids());
     }
 
     @Override

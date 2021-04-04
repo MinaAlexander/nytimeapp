@@ -65,14 +65,10 @@ public class TopRateFragment extends Fragment implements TopRatedMovieAdapter.On
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-//        mViewModel = new ViewModelProvider(this).get(TopRatedViewModel.class);
-        topRatedViewModel = new ViewModelProvider(this).get(TopRatedViewModel.class);
+         topRatedViewModel = new ViewModelProvider(this).get(TopRatedViewModel.class);
         adapter = new TopRatedMovieAdapter(this);
         layoutManager = new LinearLayoutManager(getActivity());
 
-//        binding.recycler.setAdapter(adapter);
-//        binding.recycler.setLayoutManager(layoutManager);
-//        binding.progressBar.setVisibility(View.GONE);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
         progressBar.setVisibility(View.GONE);
@@ -113,12 +109,10 @@ public class TopRateFragment extends Fragment implements TopRatedMovieAdapter.On
 
     public void LoadData() {
         topRatedViewModel.fillData(DataAuth.API_KEY, page_number);
-//        watchNowViewModel.getGenres(DataAuth.API_KEY);
-        topRatedViewModel.postsMutableLiveData.observe(getActivity(), new Observer<Data>() {
+         topRatedViewModel.postsMutableLiveData.observe(getActivity(), new Observer<Data>() {
             @Override
             public void onChanged(Data data) {
-//                binding.progressBar.setVisibility(View.VISIBLE);
-                progressBar.setVisibility(View.VISIBLE);
+                 progressBar.setVisibility(View.VISIBLE);
 
                 Log.e(TAG, "datap 1: " + data);
 
@@ -134,8 +128,7 @@ public class TopRateFragment extends Fragment implements TopRatedMovieAdapter.On
                     Log.e(TAG, "datap 3 : " + Postes.size());
                     adapter.setList(Postes);
                     adapter.notifyDataSetChanged();
-//                    binding.progressBar.setVisibility(View.GONE);
-                    progressBar.setVisibility(View.GONE);
+                     progressBar.setVisibility(View.GONE);
 
 //                    new Handler().postDelayed(new Runnable() {
 //                        @Override

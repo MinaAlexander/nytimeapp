@@ -32,33 +32,17 @@ public class MainActivity extends AppCompatActivity implements WatchNowFragment.
     private FragmentTransaction fragmentTransaction;
     private BottomNavigationView navView;
     boolean doubleBackToExitPressedOnce = false;
-//    private AppBarConfiguration appBarConfiguration;
-//    private FragmentTransaction watchNowFragment;
-//    private SearchFragment searchFragment;
-//    private NavController navController;
-//    private Fragment fragmentlayout;
+
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        if (savedInstanceState == null) {
-////            setContentView(R.layout.activity_main);
-////            fragmentlayout=findViewById(R.id.nav_host_fragment);
-////            getSupportFragmentManager().beginTransaction()
-////                    .setReorderingAllowed(true)
-////                    .add(R.id.navigation_watch_now, WatchNowFragment.class, null)
-////                    .commit();
-//        }
 
         fragment = new WatchNowFragment();
         switchFragment(fragment);
         navView = findViewById(R.id.nav_view);
-//        appBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.navigation_watch_now, R.id.navigation_top_rated, R.id.main_container)
-//                .build();
-
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -88,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements WatchNowFragment.
             }
         });
 
+
         tabletSize = (DetailesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_detailes_large);
         if (tabletSize == null) {
 //            navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -103,16 +88,13 @@ public class MainActivity extends AppCompatActivity implements WatchNowFragment.
         FragmentManager manager = getSupportFragmentManager();
         fragmentTransaction = manager.beginTransaction();
         fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-//        fragmentTransaction.addToBackStack(null);
-//        fragmentTransaction.remove(fragment);
+
         fragmentTransaction.commit();
         manager.popBackStack();
     }
 
     @Override
     public void onBackPressed() {
-//        super.onBackPressed();
-////        finish();
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;
@@ -145,63 +127,13 @@ public class MainActivity extends AppCompatActivity implements WatchNowFragment.
             intent.putExtra("movie", position);
             intent.putExtra("id", position.getId());
             intent.putExtra("page",page);
-//            intent.putExtra("body", String.valueOf(body));
-            startActivity(intent);
+             startActivity(intent);
         } else {
             dual = true;
-//            Log.e(TAG, "data2: " + source + " - " + title + " - " + body);
 
             tabletSize.update_Info(position,page);
 
         }
     }
 
-//    @Override
-//    public void heatingFavorite(MovieModel position, int page) {
-//        Log.e(TAG, "heatingFavorite id: " + position);
-//        Log.e(TAG, "heatingFavorite id: " + position.getId());
-//        Log.e(TAG, "heatingFavorite id: " + position.getPoster_path());
-//        Log.e(TAG, "heatingFavoriteid: " + position.getRelease_date());
-//
-//        if (tabletSize == null) {
-//            dual = false;
-//            Log.e(TAG, "heating: tabletSize : true " + position);
-//            Intent intent = new Intent(this, DetailesActivity.class);
-//            intent.putExtra("movie", position);
-//            intent.putExtra("id", position.getId());
-////            intent.putExtra("body", String.valueOf(body));
-//            startActivity(intent);
-//        } else {
-//            dual = true;
-////            Log.e(TAG, "data2: " + source + " - " + title + " - " + body);
-//
-//            tabletSize.update_Info(position, page);
-//
-//        }
-//    }
-//
-//    @Override
-//    public void heating(MovieModel position,int page) {
-//        Log.e(TAG, "heating move id: " + position);
-//        Log.e(TAG, "heating move id: " + position.getId());
-//        Log.e(TAG, "heating move id: " + position.getPoster_path());
-//        Log.e(TAG, "heating move id: " + position.getRelease_date());
-//
-//
-//        if (tabletSize == null) {
-//            dual = false;
-//            Log.e(TAG, "heating: tabletSize : true " + position);
-//            Intent intent = new Intent(this, DetailesActivity.class);
-//            intent.putExtra("movie", position);
-//            intent.putExtra("id", position.getId());
-////            intent.putExtra("body", String.valueOf(body));
-//            startActivity(intent);
-//        } else {
-//            dual = true;
-////            Log.e(TAG, "data2: " + source + " - " + title + " - " + body);
-//
-//            tabletSize.update_Info(position,page);
-//
-//        }
-//    }
 }

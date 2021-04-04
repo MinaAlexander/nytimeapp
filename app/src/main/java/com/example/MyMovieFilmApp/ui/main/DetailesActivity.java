@@ -18,10 +18,7 @@ import com.example.MyMovieFilmApp.ui.fragment.moviedetailes.DetailesFragment;
 public class DetailesActivity extends AppCompatActivity {
     private static final String TAG = "DetailesActivity";
     DetailesFragment currentFragment;
-    private String value_Title, value_Source, value_Body;
-    private TextView movieTitle, movieDescription, movieVoteCount, movieGernres;
-    private ImageView movieImage;
-    private ProgressBar movieRate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +26,6 @@ public class DetailesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailes);
         Intent intent = getIntent();
 
-        movieImage = findViewById(R.id.movieImage);
-        movieTitle = findViewById(R.id.Movie_title);
-        movieDescription = findViewById(R.id.move_overview);
-        movieVoteCount = findViewById(R.id.move_vote);
-        movieGernres = findViewById(R.id.moive_gernres);
-        movieRate = findViewById(R.id.movie_ratingBar);
 
         currentFragment = (DetailesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_detailes);
         movie_Info();

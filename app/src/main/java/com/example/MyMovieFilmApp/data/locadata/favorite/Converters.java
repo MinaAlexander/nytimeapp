@@ -19,16 +19,4 @@ public class Converters {
     public static String saveList(List<String> listOfString) {
         return new Gson().toJson(listOfString);
     }
-//    @TypeConverter
-//    public static ArrayList<String> fromString(String value) {
-//        Type listType = new TypeToken<ArrayList<String>>() {}.getType();
-//        return new Gson().fromJson(value, listType);
-//    }
-//
-//    @TypeConverter
-//    public static String fromArrayList(ArrayList<String> list) {
-//        Gson gson = new Gson();
-//        String json = gson.toJson(list);
-//        return json;
-//    }
 }

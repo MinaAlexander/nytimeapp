@@ -145,8 +145,7 @@ public class DetailesFragment extends Fragment {
             movieRate.setRating(movieModel.getVote_average() / 2);
             GenresTypes.clear();
 
-//        Log.e(TAG, "genres.getGenres() 11445573111 : " + genres.getGenres().contains(movieModel.getGenre_ids().get(0)));
-            Log.e(TAG, "genres.getGenres().size 22445573111339 : " + movieModel.getGenre_ids().size() + "-----" + movieModel.getGenre_ids().size());
+             Log.e(TAG, "genres.getGenres().size 22445573111339 : " + movieModel.getGenre_ids().size() + "-----" + movieModel.getGenre_ids().size());
             if (genres.getGenres() != null && movieModel.getGenre_ids() != null) {
                 if (genres.getGenres().size() != 0 && movieModel.getGenre_ids().size() != 0) {
                     for (int i = 0; i < movieModel.getGenre_ids().size(); i++) {
@@ -164,8 +163,7 @@ public class DetailesFragment extends Fragment {
                         listString += s + "   ";
                     }
 
-//                    movieGernres.setText(("\n" + Arrays.toString(GenresTypes).replaceAll("\\[|\\]", "");
-                    movieGernres.setText(String.valueOf(listString));
+                     movieGernres.setText(String.valueOf(listString));
                 }
             }
 
@@ -179,14 +177,6 @@ public class DetailesFragment extends Fragment {
 
 
     }
-
-//    public void onBackPressed() {
-//        WatchNowFragment nextFrag = new WatchNowFragment();
-//        getActivity().getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.main_container, nextFrag)
-//                .addToBackStack(null)
-//                .commit();
-//    }
 
 
 }

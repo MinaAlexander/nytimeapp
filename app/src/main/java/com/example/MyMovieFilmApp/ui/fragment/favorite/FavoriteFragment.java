@@ -78,9 +78,6 @@ public class FavoriteFragment extends Fragment implements FavoriteMovieAdapter.O
             }
         });
 
-
-
-
         /////////////////////////////////
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -103,13 +100,10 @@ public class FavoriteFragment extends Fragment implements FavoriteMovieAdapter.O
                     Log.e(TAG, "!!!isLoading : " + "   data.getTotal_pages() : " + pagesNumber);
 
                     if (page_number <= pagesNumber) {
-//                        binding.progressBar
-                        progressBar.setVisibility(View.VISIBLE);
+                         progressBar.setVisibility(View.VISIBLE);
                         page_number = page_number + 1;
-//                        favoriteViewModel.fillData(DataAuth.API_KEY, page_number);
-                    } else {
-//                        Toast.makeText(getContext(), "there is no more movies!!", Toast.LENGTH_SHORT).show();
-                    }
+                     } else {
+                     }
 
                 }
             }

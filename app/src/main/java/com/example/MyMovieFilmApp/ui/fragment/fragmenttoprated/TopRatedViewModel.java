@@ -30,8 +30,7 @@ public class TopRatedViewModel extends ViewModel {
         Log.e(TAG, "fillData: " + "key : " + key + " pageNumber : " + String.valueOf(pageNumber));
         RepositryTopRate.getINSTANCE().getTopRateMovies(key, pageNumber).enqueue(new Callback<Data>() {
 
-            //        Repositry.getINSTANCE().getPosts(Credentials.API_KEY,1).enqueue(new Callback<Data>() {
-            @Override
+             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
 
                 if (response.isSuccessful() && response.body() != null) {
